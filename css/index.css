@@ -195,7 +195,13 @@ footer {
 footer a {
     color: white;
 }
-/*About Page Styles*/
 
+.bottom-content{
+    border-top: 2px solid #ff4b00;
+}
+/*About Page Styles*/
+.description{
+    border-bottom: 2px solid #ff4b00;
+}
 
 /*Responsive Styles*/
