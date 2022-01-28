@@ -90,9 +90,30 @@ section, footer{
     padding-bottom: 4%;  
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8em;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav img{
+    width: 15em;
+}
+
 /*Middle Section Styles*/
 .middle-content {
     margin-bottom: 4%;
+    display: flex;
+    flex-direction: column;
 }
 
 .middle-content h2 {
@@ -114,6 +135,43 @@ section, footer{
     justify-content: center;
 }
 
+.boxes{
+    gap: 3em;
+}
+.box{
+    width: 10em;
+    height: 10em;
+}
+.boxes .box:nth-child(1){
+    background: teal;
+}
+.boxes .box:nth-child(2){
+    background: gold;
+}
+.boxes .box:nth-child(3){
+    background: cadetblue;
+}
+.boxes .box:nth-child(4){
+    background: coral;
+}
+.boxes .box:nth-child(5){
+    background: crimson;
+}
+.boxes .box:nth-child(6){
+    background: forestgreen;
+}
+.boxes .box:nth-child(7){
+    background: darkorchid;
+}
+.boxes .box:nth-child(8){
+    background: hotpink;
+}
+.boxes .box:nth-child(9){
+    background: indigo;
+}
+.boxes .box:nth-child(10){
+    background: dodgerblue;
+}
 /*Bottom Section Styles*/
 .bottom-content {
     display: flex;
@@ -134,6 +192,9 @@ footer {
     background-color: #ff4b00;
 }
 
+footer a {
+    color: white;
+}
 /*About Page Styles*/
 
 
