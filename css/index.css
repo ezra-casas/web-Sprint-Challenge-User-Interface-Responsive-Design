@@ -203,5 +203,27 @@ footer a {
 .description{
     border-bottom: 2px solid #ff4b00;
 }
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    gap: 5em;
+}
+.sub-info{
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    gap: 1em;
+    height: 30em;
+    border-bottom: 2px solid #ff4b00;
+}
 
 /*Responsive Styles*/
+
+@media (max-width: 500px){
+    nav {
+        flex-direction: column;
+    }
+}
