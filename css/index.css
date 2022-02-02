@@ -80,7 +80,6 @@ section, footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 100%;
 }
 
 /*Top Section Styles*/
@@ -103,7 +102,7 @@ section, footer{
 header {
     display: flex;
     flex-direction: column;
-    gap: 1.2em;
+    gap: 1em;
     width: 100%;
     font-size: 100%;
 }
@@ -113,6 +112,7 @@ nav{
     justify-content: space-around;
     height: 8em;
     flex-grow: 2;
+    gap: 1.4em;
 }
 
 .links{
@@ -245,14 +245,14 @@ footer a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 1em;
+    gap: 3em;
     width: 100%;
     
 }
 .sub-info{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 30em;
     gap: 1em;
     height: 30em;
     border-bottom: 2px solid #ff4b00;
@@ -303,14 +303,12 @@ footer a {
         width: 50%;
     }
 
-    /* ABOUT Section Responsive Styles*/
-    /* Testing */
-    
-    .about-container .description{
-        color: lightcoral;
-        background-color: lightgray;
-    }
+    /* About Responsive Styles*/
     .info{
-        background-color: lightgray;
+        align-items: center;
+        justify-content: center;
+    }
+    .sub-info{
+        justify-content: center;
     }
 }
