@@ -138,7 +138,6 @@ nav img{
     display: flex;
     max-width: 1200px;
     flex-direction: column;
-    background-color: lightgray;
 }
 .middle-content h2 {
     margin-bottom: 0;
