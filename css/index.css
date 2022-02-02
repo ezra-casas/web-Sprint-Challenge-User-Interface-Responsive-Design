@@ -110,37 +110,37 @@ nav img{
 }
 
 /*Middle Section Styles*/
+
 .middle-content {
-    margin-bottom: 4%;
     display: flex;
     flex-direction: column;
 }
 
+
 .middle-content h2 {
     margin-bottom: 0;
+    margin-left: 4%;
 }
-
-.middle-content .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .middle-content .boxes .box {
-    background: black;
-    margin: 4% 0;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
+.boxes, .box{
+    display: flex;
+}
 .boxes{
-    gap: 3em;
+    height: 30em;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 .box{
-    width: 10em;
-    height: 10em;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 2em;
 }
 .boxes .box:nth-child(1){
     background: teal;
@@ -172,16 +172,15 @@ nav img{
 .boxes .box:nth-child(10){
     background: dodgerblue;
 }
+
 /*Bottom Section Styles*/
 .bottom-content {
     display: flex;
     justify-content: space-between;
 }
-
 .bottom-content .text-container {
     width:25%;
 }
-
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
@@ -191,14 +190,13 @@ footer {
     width: 100%;
     background-color: #ff4b00;
 }
-
 footer a {
     color: white;
 }
-
 .bottom-content{
     border-top: 2px solid #ff4b00;
 }
+
 /*About Page Styles*/
 .description{
     border-bottom: 2px solid #ff4b00;
@@ -222,20 +220,71 @@ footer a {
 
 /*Responsive Styles*/
 
+@media (max-width: 1200px){
+    .middle-content{
+        height: 40em;
+        width: 100%;
+        
+    }
+    .box{
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+
+    }
+}
+
+@media (max-width: 910px){
+    .middle-content{
+        height: 25em;
+    }
+    .box{
+        width: 120px;
+        height: 120px;
+        margin: 5px;
+
+    }
+}
+@media (max-width: 893px){
+    .middle-content{
+        height: 30em;
+    }
+    .box{
+        width: 120px;
+        height: 120px;
+        margin: 2px;
+
+    }
+}
+
 @media (max-width: 500px){
     nav {
         flex-direction: column;
+        margin-top: 2em;
+    }
+    nav img{
+        width: 10em;
+        padding-bottom: 10px;
     }
     .top-content{
         flex-direction: column;
         align-items: center;
         text-align: left;
     }
+    .top-content .text-container{
+        width: 100%;
+    }
+    .middle-content{
+        height: 70em;
+    }
     .text-container{
-        height: 35em;
+        height: 15em;
     }
     .boxes{
         gap: 2em;
+        height: 70em;
         justify-content: space-around;
     }
     .box{
@@ -246,6 +295,7 @@ footer a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 5em;
     }
     .bottom-content .text-container {
         width: 50%;
