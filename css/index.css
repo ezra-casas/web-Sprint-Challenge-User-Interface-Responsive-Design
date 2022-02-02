@@ -68,6 +68,11 @@ h1, h2, h3, h4, h5 {
 section, footer{
     padding:4% 0;
 }
+
+@-ms-viewport{
+    width: device-width;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -100,23 +105,32 @@ nav{
     align-items: center;
     justify-content: space-around;
     height: 8em;
+    flex-grow: 2;
+}
+
+.links{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+nav ul li{
+    float: left;
 }
 nav a{
     text-decoration: none;
+    padding: 0.3em;
     color: black;
 }
 nav img{
-    width: 15em;
+    width: 30%;
+    flex-shrink: 0;
 }
 
 /*Middle Section Styles*/
-
 .middle-content {
     display: flex;
     flex-direction: column;
 }
-
-
 .middle-content h2 {
     margin-bottom: 0;
     margin-left: 4%;
@@ -128,12 +142,11 @@ nav img{
     display: flex;
 }
 .boxes{
-    height: 30em;
+    height: 100%;
     margin: 0;
     padding: 0;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1em;
 }
 .box{
     align-items: center;
@@ -219,54 +232,12 @@ footer a {
 }
 
 /*Responsive Styles*/
-
-@media (max-width: 1200px){
-    .middle-content{
-        height: 40em;
-        width: 100%;
-        
-    }
-    .box{
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 150px;
-        margin: 10px;
-
-    }
-}
-
-@media (max-width: 910px){
-    .middle-content{
-        height: 25em;
-    }
-    .box{
-        width: 120px;
-        height: 120px;
-        margin: 5px;
-
-    }
-}
-@media (max-width: 893px){
-    .middle-content{
-        height: 30em;
-    }
-    .box{
-        width: 120px;
-        height: 120px;
-        margin: 2px;
-
-    }
-}
-
-@media (max-width: 500px){
-    nav {
+@media (max-width: 500px){ 
+    nav{
         flex-direction: column;
-        margin-top: 2em;
     }
     nav img{
-        width: 10em;
-        padding-bottom: 10px;
+        width: 50%;
     }
     .top-content{
         flex-direction: column;
@@ -277,19 +248,18 @@ footer a {
         width: 100%;
     }
     .middle-content{
-        height: 70em;
+        height: 100%; 
     }
     .text-container{
         height: 15em;
     }
     .boxes{
-        gap: 2em;
-        height: 70em;
-        justify-content: space-around;
+        margin: 0;
+        gap: 1em;
+        
     }
     .box{
-        width: 9em;
-        height: 9em;
+        margin: 0;
     }
     .bottom-content{
         flex-direction: column;
