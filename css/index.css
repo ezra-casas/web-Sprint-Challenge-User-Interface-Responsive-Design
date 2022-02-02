@@ -76,6 +76,10 @@ section, footer{
 .container {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Top Section Styles*/
@@ -99,6 +103,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1.2em;
+    width: 100%;
 }
 nav{
     display: flex;
@@ -129,7 +134,9 @@ nav img{
 /*Middle Section Styles*/
 .middle-content {
     display: flex;
+    max-width: 1200px;
     flex-direction: column;
+    background-color: lightgray;
 }
 .middle-content h2 {
     margin-bottom: 0;
@@ -145,7 +152,7 @@ nav img{
     height: 100%;
     margin: 0;
     padding: 0;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .box{
@@ -154,6 +161,7 @@ nav img{
     width: 150px;
     height: 150px;
     margin: 2em;
+    padding: auto;
 }
 .boxes .box:nth-child(1){
     background: teal;
@@ -201,6 +209,7 @@ nav img{
 /*Footer Styles*/
 footer {
     width: 100%;
+    height: 30%;
     background-color: #ff4b00;
 }
 footer a {
@@ -233,8 +242,13 @@ footer a {
 
 /*Responsive Styles*/
 @media (max-width: 500px){ 
+    header{
+        width: 100%;
+    }
     nav{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     nav img{
         width: 50%;
