@@ -302,4 +302,15 @@ footer a {
     .bottom-content .text-container {
         width: 50%;
     }
+
+    /* ABOUT Section Responsive Styles*/
+    /* Testing */
+    
+    .about-container .description{
+        color: lightcoral;
+        background-color: lightgray;
+    }
+    .info{
+        background-color: lightgray;
+    }
 }
