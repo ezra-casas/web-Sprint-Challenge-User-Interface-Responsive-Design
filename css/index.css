@@ -46,11 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 * {
     box-sizing: border-box;
 }
-
 html{
     font-size:62.5%;
 }
@@ -59,7 +57,6 @@ body {
     line-height:1.5;
     font-size:1.6rem;
 }
-
 h1, h2, h3, h4, h5 {
     font-size: 2.5rem;
     margin-bottom: 2%;
@@ -68,13 +65,20 @@ h1, h2, h3, h4, h5 {
 section, footer{
     padding:4% 0;
 }
-.container {
+@-ms-viewport{
+    width: device-width;
+}
+
+.container{
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Top Section Styles*/
-
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -89,29 +93,102 @@ section, footer{
     padding: 0 1%;
     padding-bottom: 4%;  
 }
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    font-size: 100%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8em;
+    flex-grow: 2;
+    gap: 1.4em;
+}
+
+.links{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+nav ul li{
+    float: left;
+}
+nav a{
+    text-decoration: none;
+    padding: 0.3em;
+    color: black;
+}
+nav img{
+    width: 30%;
+    flex-shrink: 0;
+}
 
 /*Middle Section Styles*/
 .middle-content {
-    margin-bottom: 4%;
+    display: flex;
+    max-width: 1200px;
+    flex-direction: column;
 }
-
 .middle-content h2 {
     margin-bottom: 0;
+    margin-left: 4%;
 }
-
-.middle-content .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .middle-content .boxes .box {
-    background: black;
-    margin: 4% 0;
     color: white;
+}
+.boxes, .box{
     display: flex;
+}
+
+.boxes{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box{
     align-items: center;
     justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 3%;
+}
+.boxes .box:nth-child(1){
+    background: teal;
+}
+.boxes .box:nth-child(2){
+    background: gold;
+}
+.boxes .box:nth-child(3){
+    background: cadetblue;
+}
+.boxes .box:nth-child(4){
+    background: coral;
+}
+.boxes .box:nth-child(5){
+    background: crimson;
+}
+.boxes .box:nth-child(6){
+    background: forestgreen;
+}
+.boxes .box:nth-child(7){
+    background: darkorchid;
+}
+.boxes .box:nth-child(8){
+    background: hotpink;
+}
+.boxes .box:nth-child(9){
+    background: indigo;
+}
+.boxes .box:nth-child(10){
+    background: dodgerblue;
 }
 
 /*Bottom Section Styles*/
@@ -119,11 +196,9 @@ section, footer{
     display: flex;
     justify-content: space-between;
 }
-
 .bottom-content .text-container {
     width:25%;
 }
-
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
@@ -131,10 +206,116 @@ section, footer{
 /*Footer Styles*/
 footer {
     width: 100%;
+    height: 30%;
     background-color: #ff4b00;
+}
+footer a {
+    color: white;
+}
+.bottom-content{
+    border-top: 2px solid #ff4b00;
 }
 
 /*About Page Styles*/
+.about-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content:center;
+    align-items: center;
+    margin: 0 auto;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 2px solid #ff4b00;
+}
+.info{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    gap: 5em; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3em;
+    width: 100%;
+    
+}
 
+.sub-info{
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    gap: 1em;
+    height: 30em;
+    border-bottom: 2px solid #ff4b00;
+}
 
 /*Responsive Styles*/
+@media (max-width: 500px){ 
+    header{
+        width: 100%;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav img{
+        width: 50%;
+    }
+    .top-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    .top-content .text-container{
+        width: 100%;
+    }
+    .middle-content{
+        height: 100%; 
+    }
+    .text-container{
+        height: 15em;
+    }
+    .boxes{
+        margin: 0;
+        gap: 1em;
+        
+    }
+    .box{
+        margin: 0;
+    }
+    .bottom-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5em;
+    }
+    .bottom-content .text-container {
+        width: 50%;
+    }
+
+    /* About Responsive Styles*/
+    .info{
+        align-items: center;
+        justify-content: center;
+    }
+    .sub-info{
+        justify-content: center;
+    }
+    h1, h3{
+        align-self: center;
+    }
+    footer nav{
+        height: 100%;
+    }
+    .work-together h3{
+        text-align: center;
+    }
+}
